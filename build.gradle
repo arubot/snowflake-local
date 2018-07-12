@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    compile 'jibril:snowflake:1.0'
+    compile 'pw.aru.snowflake:snowflake:1.0'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {

@@ -1,8 +1,8 @@
 package pw.aru.snowflake.local;
 
-import jibril.snowflake.Snowflake;
-import jibril.snowflake.SnowflakeConfig;
-import jibril.snowflake.entities.SnowflakeGenerator;
+import pw.aru.snowflake.Snowflake;
+import pw.aru.snowflake.SnowflakeConfig;
+import pw.aru.snowflake.entities.SnowflakeGenerator;
 
 public class LocalGeneratorBuilder {
     private long datacenterIdBits = 5;
