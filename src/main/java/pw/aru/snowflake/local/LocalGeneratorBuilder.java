@@ -1,4 +1,4 @@
-package jibril.snowflake.local;
+package pw.aru.snowflake.local;
 
 import jibril.snowflake.Snowflake;
 import jibril.snowflake.SnowflakeConfig;

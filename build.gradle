@@ -5,7 +5,7 @@ plugins {
     id 'com.jfrog.bintray' version '1.8.0'
 }
 
-group = 'jibril'
+group = 'pw.aru.snowflake'
 version = '1.0'
 
 // Minified Splash
@@ -13,7 +13,7 @@ version = '1.0'
     def d = "$l ${(v.size() + l.size() + 1) % 2 != 0 ? "-" : "--"} v$v"
     def w = (0..(30 - d.size() / 2)).collect { it % 2 != 0 ? '-' : '=' }.join ''
     println "|$w| $d |${w.reverse()}|"
-})("Jibril Snowflake-Local Library", version)
+})("Aru Snowflake-Local Library", version)
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -69,7 +69,7 @@ bintray {
         repo = 'maven'
         name = project.name
         licenses = ['MIT']
-        vcsUrl = 'https://github.com/jibrilbot/snowflake-local.git'
+        vcsUrl = 'https://github.com/arubot/snowflake-local.git'
         publish = true
         version {
             name = project.version
