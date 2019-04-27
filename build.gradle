@@ -2,37 +2,30 @@ plugins {
     id 'java'
     id 'maven'
     id 'maven-publish'
-    id 'com.jfrog.bintray' version '1.8.0'
+    id 'com.jfrog.bintray' version '1.8.4'
 }
 
-group = 'pw.aru.snowflake'
+group = 'pw.aru.libs'
 version = '1.0'
 
-// Minified Splash
-({ String l, String v ->
-    def d = "$l ${(v.size() + l.size() + 1) % 2 != 0 ? "-" : "--"} v$v"
-    def w = (0..(30 - d.size() / 2)).collect { it % 2 != 0 ? '-' : '=' }.join ''
-    println "|$w| $d |${w.reverse()}|"
-})("Aru Snowflake-Local Library", version)
-
 sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 repositories {
-    maven { url = 'https://dl.bintray.com/adriantodt/maven' }
+    maven { url = 'https://dl.bintray.com/arudiscord/maven' }
+    mavenLocal()
 }
 
 dependencies {
-    compile 'pw.aru.snowflake:snowflake:1.0'
+    compile 'pw.aru.libs:snowflake:1.0'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
+    archiveClassifier = 'sources'
     from sourceSets.main.allSource
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier = 'javadoc'
     from javadoc.destinationDir
 }
 
@@ -68,8 +61,9 @@ bintray {
     pkg {
         repo = 'maven'
         name = project.name
-        licenses = ['MIT']
-        vcsUrl = 'https://github.com/arubot/snowflake-local.git'
+        userOrg = 'arudiscord'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/arudiscord/snowflake-local.git'
         publish = true
         version {
             name = project.version
@@ -79,5 +73,5 @@ bintray {
 
 bintrayUpload {
     dependsOn build
-    dependsOn 'publishBintrayReleasePublicationToMavenLocal'
+    dependsOn publishToMavenLocal
 }

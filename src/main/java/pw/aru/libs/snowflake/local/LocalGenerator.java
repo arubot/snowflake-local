@@ -1,8 +1,8 @@
-package pw.aru.snowflake.local;
+package pw.aru.libs.snowflake.local;
 
-import pw.aru.snowflake.SnowflakeConfig;
-import pw.aru.snowflake.entities.SnowflakeDatacenter;
-import pw.aru.snowflake.entities.SnowflakeGenerator;
+import pw.aru.libs.snowflake.SnowflakeConfig;
+import pw.aru.libs.snowflake.entities.SnowflakeDatacenter;
+import pw.aru.libs.snowflake.entities.SnowflakeGenerator;
 
 import java.util.HashMap;
 import java.util.Map;
