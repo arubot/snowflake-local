@@ -3,6 +3,10 @@ A local implementation of Snowflake generation in Java.
 
 Licensed under the [Apache 2.0 License](https://github.com/arudiscord/snowflake-local/blob/master/LICENSE).
 
+## Notice
+
+This library is now discontinued, use [Nanoflakes Java implementation](https://github.com/nanoflakes/nanoflakes-java) now.
+
 ### Installation
 
 ![Latest Version](https://api.bintray.com/packages/arudiscord/maven/snowflake-local/images/download.svg)
